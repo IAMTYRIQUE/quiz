@@ -1,0 +1,79 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 100%;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-column: 2/2;
+}
+
+.question, .option, .button {
+    height: 33vh;
+    grid-column: 2/2;
+}
+
+.question {
+    grid-row: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+    grid-row: 2/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.button {
+    grid-row: 3/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    font-size: 1em;
+    padding: .4em 5em;
+    border: none;
+    border-radius: 15px;
+    background-color: #328DA8;
+    color: #ffffff;
+}
+
+.btn:active {
+    background-color: #47C2E7;
+}
+
+/*-------------------TABLET---------------------*/
+@media only screen and (min-width:737px) and (max-width:991px) {
+    body{
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (min-width:991px) and (max-width:1280px) {
+    body{
+        font-size: 1.5em;
+    }
+}
+
+/*-------------------DESKTOP----------------------*/
+@media screen and (min-width: 1280px) {
+    body {
+        font-size: 1.4em;
+    }
+    .main-container {
+        grid-template-columns: 30% 40% 30%;
+    }
+}
